@@ -9,7 +9,7 @@ function App() {
     <Container>
       <Router>
         <Switch>
-          <Route path="/FrontEnd">
+          <Route path="/front">
             <Front/>
             </Route>
           <Route path="/admin">
