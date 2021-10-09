@@ -6,7 +6,6 @@ import { AiOutlinePieChart } from "react-icons/ai";
 import Badge from "./Badge";
 import AvatarImage from "../assets/download.jpg";
 import { darkThemeColor } from "../utils";
-
 function Sidebar() {
   return (
     <Container>
@@ -142,6 +141,5 @@ const ContactContainer = styled.div`
     margin-bottom: 2rem;
   }
 `;
-
 
 export default Sidebar;
