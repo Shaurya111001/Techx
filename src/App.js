@@ -1,8 +1,10 @@
 import "./App.css";
+import { useState } from "react";
 import styled from "styled-components";
 import Admin from "./admin/Admin";
 import Employee from "./employee/Employee";
 import Front from "./FrontPage/front";
+import Form from './admin/components/Form'
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 function App() {
   return (
@@ -13,7 +15,12 @@ function App() {
             <Front/>
             </Route>
           <Route path="/admin">
+          
             <Admin />
+          </Route>
+          <Route path="/admin/register">
+            <Form />
+           
           </Route>
           <Route path="/employee">
             <Employee />
@@ -24,6 +31,7 @@ function App() {
   );
 }
 
-const Container = styled.div``;
+const Container = styled.div`
+overflow:hidden;`;
 
 export default App;

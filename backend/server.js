@@ -4,8 +4,9 @@ import mongoose from 'mongoose';
 import { adminSignin } from './controllers/adminSignin.js';
 import {employeeSignin} from './controllers/employeeSignin.js'
 import {createTask} from './controllers/createTask.js'
-import bodyParser from 'body-parser';
+// import bodyParser from 'body-parser';
 import {fetchTask} from './controllers/fetchTask.js'
+import {createEmployee} from './controllers/createEmployee.js'
 
 const app = express();
 app.use(express.json());
@@ -30,13 +31,14 @@ export const connectdb = async() => {
     });
 };
 
-connectdb();
+connectdb(); 
 
 app.post('/adminregister', adminRegister);
 app.post('/adminsignin',adminSignin) ; 
 app.post('/employeesignin',employeeSignin) ; 
 app.post('/createtask',createTask); 
-app.get('/tasks',fetchTask)
+app.get('/tasks',fetchTask) ; 
+app.post('/createemployee',createEmployee);
 
 app.listen(port, () => {
   console.log(`listening on port ${port}`);

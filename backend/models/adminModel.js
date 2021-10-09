@@ -13,7 +13,16 @@ const adminSchema = new mongoose.Schema({
     password:{
         type:String,
         required:true
-    }
+    },
+    employees:[
+        {
+            name:{type:String},
+            email:{type:String,unique:true},
+            designation:{type:String},
+            contact:{type:String},
+            password:{type:String,required:true}
+        }
+    ]
 });
 
 const Admin = new mongoose.model('Admin',adminSchema) ; 

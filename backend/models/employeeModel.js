@@ -14,6 +14,10 @@ const employeeSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  employeed_by:{
+    type:String,
+    required:true,
+  },
   tasks:[String],
 });
 

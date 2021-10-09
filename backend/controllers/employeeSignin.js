@@ -11,7 +11,8 @@ export const employeeSignin = (req,res) => {
         }
         if(req.body.password === employee[0].password){
             return res.status(200).json({
-                message:'sign in successfully!!'
+                message:'sign in successfully!!',
+                employee:employee
             })
         }
         if(req.body.password !== employee[0].password){
@@ -22,6 +23,7 @@ export const employeeSignin = (req,res) => {
         else{
             return res.status(400) ;
         }
+        // console.log(employee)
     })
 
 }
