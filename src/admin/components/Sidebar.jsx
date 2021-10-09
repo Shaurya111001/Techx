@@ -6,10 +6,6 @@ import { AiOutlinePieChart } from "react-icons/ai";
 import Badge from "./Badge";
 import AvatarImage from "../assets/download.jpg";
 import { darkThemeColor } from "../utils";
-import MyForm from './form'
-function form() {
-  <MyForm/>
-}
 function Sidebar() {
   return (
     <Container>
@@ -28,7 +24,7 @@ function Sidebar() {
             <RiFileCopyLine />
             <h3>Projects</h3>
           </Link>
-          <Link onClick = {Form}>
+          <Link>
             <FaWallet />
             <h3>Salary</h3>
           </Link>
