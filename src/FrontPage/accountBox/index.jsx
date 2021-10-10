@@ -66,12 +66,13 @@ const switchToSignin = () => {
 export default AccountBox
 
 const BoxContainer = styled.div`
-width:280px;
+width:380px;
 min-height:550px;
 display: flex;
 flex-direction: column;
 border-radius:19px;
 margin-top:50px;
+margin-left: 30px;
 background-color: white;
 box-shadow:0 0 2px rgba(15, 15, 15, 0.28);
 position:relative;
@@ -138,7 +139,7 @@ const backdropvariants = {
     },
     collapsed: {
         width:"160%",
-        height:"550px",
+        height:"600px",
         borderRadius:"50%",
         transform:"rotate(60deg)",
     },

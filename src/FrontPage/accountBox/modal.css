@@ -6,14 +6,15 @@
     height: 100vh;
     top: 0;
     left: 0;
+    z-index: 101;
   }
   
   .box {
     position: relative;
-    width: 70%;
+    width: 30%;
     margin: 0 auto;
     height: auto;
-    max-height: 70vh;
+    max-height: 80vh;
     margin-top: calc(100vh - 85vh - 20px);
     background: #fff;
     border-radius: 4px;
@@ -26,7 +27,7 @@
     content: 'x';
     cursor: pointer;
     position: fixed;
-    right: calc(15% - 30px);
+    right: calc(40% - 100px);
     top: calc(100vh - 85vh - 33px);
     background: #ededed;
     width: 25px;
