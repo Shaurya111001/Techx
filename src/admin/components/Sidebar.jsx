@@ -1,11 +1,12 @@
-import React from "react";
-import styled from "styled-components";
-import { RiHomeLine, RiFileCopyLine } from "react-icons/ri";
-import { FaWallet } from "react-icons/fa";
-import { AiOutlinePieChart } from "react-icons/ai";
-import Badge from "./Badge";
-import AvatarImage from "../assets/download.jpg";
-import { darkThemeColor } from "../utils";
+import React from 'react';
+import styled from 'styled-components';
+import { RiHomeLine, RiFileCopyLine } from 'react-icons/ri';
+import { FaWallet } from 'react-icons/fa';
+import { AiOutlinePieChart } from 'react-icons/ai';
+import Badge from './Badge';
+import AvatarImage from '../assets/download.jpg';
+import { darkThemeColor } from '../utils';
+import { Link } from 'react-router-dom';
 
 function Sidebar() {
   return (
@@ -13,29 +14,55 @@ function Sidebar() {
       <ProfileContainer>
         <Avatar src={AvatarImage} />
         <Name>Admin Name</Name>
-        <Badge content="CEO" />
+        <Badge content='CEO' />
       </ProfileContainer>
       <LinksContainer>
         <Links>
-          <Link>
-            <RiHomeLine />
-            <h3>Dashboard</h3>
-          </Link>
-          <Link>
-            <RiFileCopyLine />
-            <h3>Projects</h3>
-          </Link>
-          <Link>
-            <FaWallet />
-            <h3>Salary</h3>
-          </Link>
-          <Link>
-            <AiOutlinePieChart />
-            <h3>Reports</h3>
-          </Link>
-          <Link>
-            <button >Add Employee</button>
-          </Link>
+          <Lin>
+            <Link to='./addemployee'>
+              <button>
+                <span>
+                  <RiHomeLine />
+                </span>
+                Dashboard
+              </button>
+            </Link>
+          </Lin>
+          <Lin>
+            <Link to='./addemployee'>
+              <button>
+                <span>
+                  <RiFileCopyLine />
+                </span>
+                Projects
+              </button>
+            </Link>
+          </Lin>
+          <Lin>
+            <Link to='/addemployee'>
+              <button>
+                <span>
+                  <FaWallet />
+                </span>
+                Salary
+              </button>
+            </Link>
+          </Lin>
+          <Lin>
+            <Link to='/addemployee'>
+              <button>
+                <span>
+                  <AiOutlinePieChart />{' '}
+                </span>
+                Reports
+              </button>
+            </Link>
+          </Lin>
+          <Lin>
+            <Link to='/addemployee'>
+              <button>Add Employee</button>
+            </Link>
+          </Lin>
         </Links>
         {/* <ContactContainer>
           <span>Having troubles?</span>
@@ -96,8 +123,8 @@ const Links = styled.ul`
   height: 60%;
 `;
 
-const Link = styled.li`
-  margin-left: 25%;
+const Lin = styled.li`
+  margin-left: 15%;
   margin-bottom: 2rem;
   display: flex;
   gap: 1rem;
@@ -111,14 +138,18 @@ const Link = styled.li`
     margin-top: 3%;
   }
   button {
-    background-color:#00d4ff;
-    border-radius:40px;
-    font-size:20px;
-    border-color:#00d4ff;
-    color:white;
-    font-weight:500;
-    padding:10px;
-    cursor:pointer;
+    width: 9em;
+    background-color: #00d4ff;
+    border-radius: 40px;
+    font-size: 20px;
+    border-color: #00d4ff;
+    color: white;
+    font-weight: 500;
+    padding: 10px;
+    cursor: pointer;
+    span {
+      padding: 2%;
+    }
   }
 `;
 
@@ -142,6 +173,5 @@ const ContactContainer = styled.div`
     margin-bottom: 2rem;
   }
 `;
-
 
 export default Sidebar;

@@ -1,32 +1,42 @@
-import React from "react";
-import styled from "styled-components";
-import AvatarImage from "../assets/avatarImage2.jpg";
-import AvatarImage2 from "../assets/avatarImage3.jpg";
-import { cardShadow, hoverEffect, themeColor } from "../utils";
+import {React,useState,useEffect} from 'react';
+import styled from 'styled-components';
+import AvatarImage from '../assets/avatarImage2.jpg';
+import AvatarImage2 from '../assets/avatarImage3.jpg';
+import { cardShadow, hoverEffect, themeColor } from '../utils';
+import ProjectEmployee from './ProjectEmployee.js';
+import axios from 'axios';
 
 function Projects() {
+
+    
+  const [employees,setEmployees] = useState([]) ;
+  
+  const email = 'madhavshuklasr3@gmail.com'
+
+  const getEmployees = async() => {
+    
+  await axios.get(`http://localhost:9000/getadmindetails/${email}`)
+  .then((res)=>{
+    setEmployees(res.data.data.employees)
+  })
+
+  }
+
+  useEffect(() => {    
+    getEmployees() ; 
+  }, [])
+
+
   return (
     <YourProjects>
-      <Project>
-        <Avatar>
-          <img src={AvatarImage} alt="" />
-        </Avatar>
-        <Detail>
-          <Title>Employee 1</Title>
-          <SubTitle> Working on the project of web Dev</SubTitle>
-        </Detail>
-      </Project>
-      <Project>
-        <Avatar>
-          <img src={AvatarImage2} alt="" />
-        </Avatar>
-        <Detail>
-          <Title>Employee 2</Title>
-          <SubTitle>Working on the project of App </SubTitle>
-        </Detail>
-      </Project>
-      
-      <AllProjects>See all  Ongoing projects</AllProjects>
+      {
+        employees.map((employee)=>(
+          <ProjectEmployee employee={employee} />
+        ))
+      }
+
+
+      <AllProjects>See all Ongoing projects</AllProjects>
     </YourProjects>
   );
 }

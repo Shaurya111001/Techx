@@ -2,27 +2,26 @@ import "./App.css";
 import { useState } from "react";
 import styled from "styled-components";
 import Admin from "./admin/Admin";
+import Form from "./admin/components/Form";
 import Employee from "./employee/Employee";
 import Front from "./FrontPage/front";
-import Form from './admin/components/Form'
+
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 function App() {
   return (
     <Container>
       <Router>
         <Switch>
-          <Route path="/front">
+          <Route path="/">
             <Front/>
             </Route>
           <Route path="/admin">
-          
-            <Admin />
+            <Admin/>
           </Route>
-          <Route path="/admin/register">
+          <Route path="/addemployee">
             <Form />
-           
           </Route>
-          <Route path="/employee">
+		  <Route path="/employee">
             <Employee />
           </Route>
         </Switch>
@@ -32,6 +31,6 @@ function App() {
 }
 
 const Container = styled.div`
-overflow:hidden;`;
+overflow: hidden;`;
 
 export default App;

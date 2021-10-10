@@ -1,12 +1,11 @@
-import React from "react";
-import styled from "styled-components";
-import Navbar from "./Navbar";
-import Earnings from "./Earnings";
-import Info from "./Info";
-import JoinSlack from "./JoinSlack";
-import ProjectRecommendation from "./ProjectRecommendation";
-import Projects from "./Projects";
-import Invoices from "./Invoices";
+import React from 'react';
+import styled from 'styled-components';
+import Navbar from './Navbar';
+import Earnings from './Earnings';
+import Info from './Info';
+import JoinSlack from './JoinSlack';
+import Projects from './Projects';
+import Invoices from './Invoices';
 
 function MainContent() {
   return (
@@ -29,12 +28,7 @@ function MainContent() {
               <TitleText>Recent Salary Update</TitleText>
               <Invoices />
             </InvoiceContainer>
-            {/* <JoinSlack /> */}
           </ColumnOne2>
-          <ColumnTwo2>
-            <TitleText>Projects Given</TitleText>
-            <ProjectRecommendation />
-          </ColumnTwo2>
         </SectionTwo>
       </SubContainer>
     </Container>
@@ -93,7 +87,7 @@ const ColumnOne1 = styled.div`
 const ColumnTwo1 = styled.div`
   display: flex;
   flex-direction: column;
-  height: 115%;
+  height: 270%;
   width: 100%;
   @media screen and (min-width: 320px) and (max-width: 1080px) {
     height: max-content;
