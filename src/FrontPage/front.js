@@ -2,20 +2,14 @@ import './front.css';
 import React from 'react';
 import {useState, useEffect} from 'react';
 import { Suspense} from 'react';
-import Popup from "./accountBox/modal";
-import AccountBox from "./accountBox/index";
 import AnimationCanvas from "./animation";
+import Button from './accountBox/Button';
 
 function Front() {
-  const [isOpen, setIsOpen] = useState(false);
- 
-  const togglePopup = () => {
-    setIsOpen(!isOpen);
-  }
   return (
     <div className="Front">
       <header>
-        <button onClick = {togglePopup}>LOGIN/REGISTER</button>
+        <Button />
         </header>
       <body>
        <div className="anim">
@@ -23,14 +17,6 @@ function Front() {
             <AnimationCanvas />
           </Suspense>
     </div> 
-    <div>
-    {isOpen && <Popup
-      content={<>
-        <AccountBox/>
-      </>}
-      handleClose={togglePopup}
-    />}
-  </div>
     </body>
     </div>
 

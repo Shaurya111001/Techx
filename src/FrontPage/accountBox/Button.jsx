@@ -1,16 +1,31 @@
 import React from 'react'
 import styled from 'styled-components'
-function button() {
+import {useState} from "react";
+import Popup from "./modal";
+import AccountBox from "./index";
+function Button() {
+    const [isOpen, setIsOpen] = useState(false);
+    const togglePopup = () => {
+    setIsOpen(!isOpen);
+    }
     return (
+        <div>
         <Div>
-            
-            <button>Login/SIGNUP</button>
-        
+            <button onClick ={togglePopup}>Login</button>
         </Div>
+        <div>
+        {isOpen && <Popup
+        content={<>
+            <AccountBox/>
+        </>}
+        handleClose={togglePopup}
+        />}
+        </div>
+    </div>
     )
 }
 
-export default button
+export default Button
 
 const Div = styled.div`
 
@@ -19,6 +34,9 @@ padding:0;
 background-color:black;
 padding-top:1em;
 padding-bottom:1em;
+
+
+
 
 
 

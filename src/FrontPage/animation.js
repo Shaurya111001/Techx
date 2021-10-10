@@ -115,7 +115,7 @@ function AnimationCanvas() {
       anchorX="center" 
       anchorY="middle" 
     >
-      ARCHIT PORWAL
+      GET YOUR BUSINESS ONLINE
     </Text>
       <Suspense fallback={null}>
         <Points />
