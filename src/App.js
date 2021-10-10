@@ -5,6 +5,7 @@ import Admin from "./admin/Admin";
 import Form from "./admin/components/Form";
 import Employee from "./employee/Employee";
 import Front from "./FrontPage/front";
+import Form2 from "./admin/Transaction/Form2";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 function App() {
@@ -12,7 +13,7 @@ function App() {
     <Container>
       <Router>
         <Switch>
-          <Route path="/">
+          <Route path="/f">
             <Front/>
             </Route>
           <Route path="/admin">
@@ -20,6 +21,9 @@ function App() {
           </Route>
           <Route path="/addemployee">
             <Form />
+          </Route>
+          <Route path="/addTransaction">
+            <Form2 />
           </Route>
 		  <Route path="/employee">
             <Employee />

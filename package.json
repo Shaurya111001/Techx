@@ -5,7 +5,9 @@
   "dependencies": {
     "@react-three/drei": "^7.13.0",
     "@taquito/beacon-wallet": "^10.2.0",
+    "@taquito/signer": "^10.2.0",
     "@taquito/taquito": "^10.2.0",
+    "@taquito/tezbridge-signer": "^10.2.0",
     "@temple-wallet/dapp": "^5.0.2",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",

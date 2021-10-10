@@ -19,7 +19,7 @@ function Sidebar() {
       <LinksContainer>
         <Links>
           <Lin>
-            <Link to='./addemployee'>
+            <Link to='./admin'>
               <button>
                 <span>
                   <RiHomeLine />
@@ -34,33 +34,18 @@ function Sidebar() {
                 <span>
                   <RiFileCopyLine />
                 </span>
-                Projects
+                Add Employee
               </button>
             </Link>
           </Lin>
           <Lin>
-            <Link to='/addemployee'>
+            <Link to='/addtransaction'>
               <button>
                 <span>
                   <FaWallet />
                 </span>
-                Salary
+                Add Transaction
               </button>
-            </Link>
-          </Lin>
-          <Lin>
-            <Link to='/addemployee'>
-              <button>
-                <span>
-                  <AiOutlinePieChart />{' '}
-                </span>
-                Reports
-              </button>
-            </Link>
-          </Lin>
-          <Lin>
-            <Link to='/addemployee'>
-              <button>Add Employee</button>
             </Link>
           </Lin>
         </Links>
