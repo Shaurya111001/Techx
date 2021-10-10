@@ -49,7 +49,7 @@ transition: all 200ms ease-in-out;
 `
 
 export const SubmitButton =styled.button`
-width:100%;
+width:400px;
 padding: 11px 40%;
 color: white;
 font-size: 12px;

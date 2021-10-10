@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import './Formcss2.css'
 import { TezosToolkit } from '@taquito/taquito'
-import { TempleWallet } from '@temple-wallet/dapp';
+import { BeaconWallet } from '@taquito/beacon-wallet';
     
 class Form2 extends Component {
     constructor(props) {
@@ -19,26 +19,26 @@ class Form2 extends Component {
         }
         this.handleSubmit=this.handleSubmit.bind(this)
         const Tezos = new TezosToolkit('https://granadanet.smartpy.io')
-        TempleWallet.isAvailable()
-        .then(() => {
-        const mywallet = new TempleWallet('TECHX2');
-        mywallet.connect('granadanet').then(() => {
-            Tezos.setWalletProvider(mywallet);
-            return mywallet.getPKH()}).then((pkh) => {
-            console.log(`Your address: ${pkh}`);
-        });
-        })
-        .catch((err) => console.log(err));
-    Tezos.contract
-        .at('KT1T5yC3M3sfPnaZQboG99VAphyaCPzmEkze')
-        .then((contract) => {
-            return contract.methods.Add_transaction(3,2,4,5,4,5).send();
-        })
-        .then((op) => {
-            return op.confirmation(1).then(() => op.hash);
-        })
-        .then((hash) => console.log(`Operation injected: https://granada.tzstats.com/${hash}`))
-        .catch((error) => console.log(`Error: ${JSON.stringify(error, null, 2)}`));
+        const options = { name: 'TECHX2' };
+        const wallet = new BeaconWallet(options);
+
+        wallet
+        .requestPermissions({ network: { type: 'granadanet' } })
+        .then((_) => wallet.getPKH())
+        .then((address) => console.log(`Your address: ${address}`));
+
+        Tezos.setWalletProvider(wallet);
+
+        Tezos.contract
+            .at('KT1T5yC3M3sfPnaZQboG99VAphyaCPzmEkze')
+            .then((contract) => {
+                return contract.methods.Add_transaction(3,2,4,5,4,5).send();
+            })
+            .then((op) => {
+                return op.confirmation(1).then(() => op.hash);
+            })
+            .then((hash) => console.log(`Operation injected: https://granada.tzstats.com/${hash}`))
+            .catch((error) => console.log(`Error: ${JSON.stringify(error, null, 2)}`));
 
         
     }

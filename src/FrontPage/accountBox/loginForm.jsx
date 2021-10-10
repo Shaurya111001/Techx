@@ -3,6 +3,7 @@ import axios from 'axios';
 import { BoldLink, BoxContainer, FormContainer, Input, MutedLink, SubmitButton } from "./coomon";
 import {AccountContext} from "./accountContext"
 import {useState} from 'react';
+import { Link } from 'react-router-dom';
 function LoginForm() {
 
     const { switchToSignup } =useContext(AccountContext);
@@ -25,7 +26,9 @@ function LoginForm() {
                
             </FormContainer>
                 <MutedLink href="#">Forget your password</MutedLink>
+                <Link to="./employee">
                 <SubmitButton type="submit" onClick={sending}>SignIn</SubmitButton>
+                </Link>
                 <MutedLink href="#">Don't have account? <BoldLink href ="#" onClick= {switchToSignup}>SignUp</BoldLink></MutedLink>
         </BoxContainer>
     )

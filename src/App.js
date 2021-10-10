@@ -13,17 +13,17 @@ function App() {
     <Container>
       <Router>
         <Switch>
-          <Route path="/f">
+          <Route path="/front">
             <Front/>
             </Route>
           <Route path="/admin">
             <Admin/>
           </Route>
+          <Route path="/addTransaction">
+            <Form2/>
+          </Route>
           <Route path="/addemployee">
             <Form />
-          </Route>
-          <Route path="/addTransaction">
-            <Form2 />
           </Route>
 		  <Route path="/employee">
             <Employee />

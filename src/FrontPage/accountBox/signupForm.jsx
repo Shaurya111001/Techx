@@ -3,6 +3,7 @@ import { useState } from "react";
 import { BoldLink, BoxContainer, FormContainer, Input, MutedLink, SubmitButton } from "./coomon";
 import {AccountContext} from "./accountContext"
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 function SignupForm() {
     const { switchToSignin } =useContext(AccountContext);
     const signup = ()=>{
@@ -28,7 +29,9 @@ function SignupForm() {
                 <Input type="password" value={conpass} onChange={(event) =>{setconpass(event.target.value)}} placeholder =" Confirm Password" />
                
             </FormContainer>
+                <Link to="./admin">
                 <SubmitButton type="submit" onClick={signup}>SignUp</SubmitButton>
+                </Link>
                 <MutedLink href="#">Already Have an account? <BoldLink href ="#" onClick= {switchToSignin}>SignIn</BoldLink></MutedLink>
         </BoxContainer>
     ) 
