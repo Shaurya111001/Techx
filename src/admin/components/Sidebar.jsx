@@ -8,6 +8,8 @@ import AvatarImage from '../assets/download.jpg';
 import { darkThemeColor } from '../utils';
 import { Link } from 'react-router-dom';
 
+
+
 function Sidebar() {
   return (
     <Container>
@@ -39,13 +41,13 @@ function Sidebar() {
             </Link>
           </Lin>
           <Lin>
-            <Link to='/addtransaction'>
-              <button>
-                <span>
-                  <FaWallet />
-                </span>
-                Add Transaction
-              </button>
+            <Link to="./Transaction">
+            <button>
+              <span>
+                <FaWallet />
+              </span>
+              Add Transaction
+            </button>
             </Link>
           </Lin>
         </Links>

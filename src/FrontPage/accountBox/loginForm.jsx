@@ -10,10 +10,11 @@ function LoginForm() {
     const [email, setemail] = useState("");
     const [password, setpass] = useState("");
     const sending = ()=>{
-        axios.post('http://localhost:9000/adminsignin', {
-            email,
-            password
-          })
+        const config = {
+            "email":email,
+            "password":password
+        }
+        axios.post('http://localhost:9000/adminsignin',config)
           .then(function (response) {
             console.log(response);
           })
