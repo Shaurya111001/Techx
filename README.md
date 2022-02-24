@@ -1,70 +1,18 @@
-# Getting Started with Create React App
+WINNER AT
+STARTUP SAGA - A BUG IN A STARTUP
+The problem TechX solves
+In just four months, the world has been transformed. The COVID pandemic is an unprecedented and growing global crisis with devastating health, economic and social impact in every country. Small and medium-sized enterprises (SMEs) are changing their business models in order to adapt to this changing environment. And the most important step in this direction is digitalization.
+We intend to solve this problem by creating a service-based solution for firms to rapidly digitalize them and provide them with a fast, secure, reliable portal where they keep track of their tasks, and financial transactions. The Admin will be provided with all the tools like stats of employees, project reports, access to financial transactions kept on the blockchain.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Approach:
+We will create a login/signup portal using ReactJS and connect it to the Mongo database using our Backend running on Express JS where everything from admin data, employee data, and employee the task will be stored. And we will connect our Frontend with Tezos blockchain where we will store confidential information like financial transactions.
 
-## Available Scripts
+Challenges we ran into
+We made two models admin and employee, So in the admin model, there will be two data (1st data of admin itself and 2nd will be of employees who got hired by admin). We defined schema for the employee model. we added employee data in the admin model but then we have to add that in employee collection also. Then we solved this by using the internet.
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Technologies we used
+MongoDB
+reactjs
+Express js
+Tezos Blockchain
+React Three Fiber
